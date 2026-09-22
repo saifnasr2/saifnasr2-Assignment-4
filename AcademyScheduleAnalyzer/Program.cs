@@ -9,8 +9,9 @@ internal class Program
         // DisplayAllSessions(sessionNames , sessionDates , sessionDurations);
         // SearchForSession("c# Basics");
         // SortSessionNames();
-        ReverseSessionNames();
-
+        // ReverseSessionNames();
+        // FindSessionIndex("Functions");
+        // CheckSessionExists("Functions");
     }
 #region StarterData
     public static string[] sessionNames =
@@ -100,6 +101,26 @@ internal class Program
         Console.WriteLine($"Reversed Session Names: {string.Join(", " , copiedArray)}");
 
     }
+
+
+    public static void FindSessionIndex(string sessionName)
+    {
+        int sessionIndex = Array.IndexOf(sessionNames , sessionName);
+        Console.WriteLine($"Index: {sessionIndex}");
+    }
+
+
+    public static void CheckSessionExists(string sessionName)
+    {
+        if (!Array.Exists(sessionNames, s => s == sessionName))
+        {
+            Console.WriteLine("Session not found");
+            return;
+        }
+
+        Console.WriteLine("Session found");
+    }
+
 }
 
 
