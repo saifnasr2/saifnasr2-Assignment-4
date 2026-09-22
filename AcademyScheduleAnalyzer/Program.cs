@@ -1,11 +1,16 @@
-﻿namespace AcademyScheduleAnalyzer;
+﻿using System.Collections.Immutable;
+
+namespace AcademyScheduleAnalyzer;
 
 internal class Program
 {
     static void Main(string[] args)
     {
         // DisplayAllSessions(sessionNames , sessionDates , sessionDurations);
-        SearchForSession("c# Basics");
+        // SearchForSession("c# Basics");
+        SortSessionNames();
+
+
     }
 #region StarterData
     public static string[] sessionNames =
@@ -72,6 +77,17 @@ internal class Program
 
     }
 
+
+    public static void SortSessionNames()
+    {
+        string[] copiedArray = new string[sessionNames.Length];
+        Array.Copy(sessionNames , copiedArray , sessionNames.Length);
+        Array.Sort(copiedArray);
+
+        Console.WriteLine($"Non-Sorted Session Names: {string.Join(", ",sessionNames)}");
+        Console.WriteLine($"Sorted Session Names: {string.Join(", ",copiedArray)}");
+
+    }
 
 }
 
