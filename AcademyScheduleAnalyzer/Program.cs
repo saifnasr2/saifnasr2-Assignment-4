@@ -8,8 +8,8 @@ internal class Program
     {
         // DisplayAllSessions(sessionNames , sessionDates , sessionDurations);
         // SearchForSession("c# Basics");
-        SortSessionNames();
-
+        // SortSessionNames();
+        ReverseSessionNames();
 
     }
 #region StarterData
@@ -89,6 +89,17 @@ internal class Program
 
     }
 
+
+    public static void ReverseSessionNames()
+    {
+        string[] copiedArray = new string[sessionNames.Length];
+        Array.Copy(sessionNames , copiedArray , sessionNames.Length);
+        Array.Reverse(copiedArray);
+
+        Console.WriteLine($"Non-Reversed Session Names: {string.Join(", " , sessionNames)}");
+        Console.WriteLine($"Reversed Session Names: {string.Join(", " , copiedArray)}");
+
+    }
 }
 
 
