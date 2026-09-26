@@ -1,0 +1,7 @@
+// Validating benchmarks:
+// Benchmark StringBenchmark.StringConcatenation: DefaultJob [Iterations=100]
+//    * Benchmarked method `StringConcatenation` is static. Benchmarks MUST be instance methods, static methods are not supported.
+
+// Benchmark StringBenchmark.StringBuilderConcatenation: DefaultJob [Iterations=100]
+//    * Benchmarked method `StringBuilderConcatenation` is static. Benchmarks MUST be instance methods, static methods are not supported.
+
